@@ -7,6 +7,18 @@ shows live progress with an ETA in a terminal UI.
 The destination is kept as an exact mirror of the source: anything removed
 or renamed on the source is deleted from the destination too.
 
+## Demo
+
+<!--
+Upload each mp4 by dragging it into the GitHub web editor (or a throwaway
+issue/PR comment) and paste the resulting user-attachments URL in place of
+this comment. See https://github.com/user-attachments/assets/... once uploaded.
+-->
+
+**transcoding-1.mp4** — _TODO: paste uploaded video link here_
+
+**transcoding-2.mp4** — _TODO: paste uploaded video link here_
+
 ## Features
 
 - Transcodes `.flac` → `.mp3` (320kbps CBR) via `ffmpeg`, preserving tags
