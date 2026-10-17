@@ -127,27 +127,6 @@ To see what a run would do without changing anything:
 ./flacmirror -dry-run /Volumes/MusicHDD/FLAC /Volumes/SDCARD/Music
 ```
 
-### Example output
-
-```
-$ ./flacmirror /Volumes/MusicHDD/FLAC /Volumes/SDCARD/Music
-Scanning library...
-48 to transcode, 6 to copy, 512 up to date, 3 to delete
-This will permanently delete 3 file(s) from /Volumes/SDCARD/Music. Continue? [y/N] y
-
-flac-mirror
-
-[████████████████████████----------]  68%
-
-transcode 33/48   copy 6/6   delete 3/3   (512 already up to date)
-ETA: 1m42s
-
-  ⠿ Pink Floyd/The Dark Side of the Moon/04 Time.mp3
-  ⠿ Pink Floyd/The Dark Side of the Moon/05 The Great Gig in the Sky.mp3
-
-Press q to cancel.
-```
-
 ## Project layout
 
 ```
