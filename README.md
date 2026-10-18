@@ -1,5 +1,7 @@
 # flac-mirror
 
+[![tests](https://github.com/randusr836/flac-mirror/actions/workflows/test.yml/badge.svg)](https://github.com/randusr836/flac-mirror/actions/workflows/test.yml)
+
 A CLI tool that mirrors a FLAC music library onto a destination (e.g. an SD
 card) as 320kbps MP3s. It transcodes in parallel across CPU cores and
 shows live progress with an ETA in a terminal UI.
