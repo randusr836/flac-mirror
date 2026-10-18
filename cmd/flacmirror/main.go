@@ -21,6 +21,10 @@ import (
 	"flacmirror/internal/tui"
 )
 
+// version is set at build time via -ldflags "-X main.version=...", e.g. by
+// goreleaser from the release tag.
+var version = "dev"
+
 func main() {
 	if err := run(); err != nil {
 		fmt.Fprintln(os.Stderr, "error:", err)
@@ -33,6 +37,7 @@ func run() error {
 	bitrate := flag.String("bitrate", "320k", "MP3 CBR bitrate")
 	dryRun := flag.Bool("dry-run", false, "show what would change without touching any files")
 	yes := flag.Bool("y", false, "skip the confirmation prompt")
+	showVersion := flag.Bool("version", false, "print the version and exit")
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "Usage: %s [flags] <source-dir> <dest-dir>\n\n", os.Args[0])
 		fmt.Fprintln(os.Stderr, "Mirrors a FLAC library at <source-dir> onto <dest-dir> as 320kbps MP3s,")
@@ -41,6 +46,11 @@ func run() error {
 		flag.PrintDefaults()
 	}
 	flag.Parse()
+
+	if *showVersion {
+		fmt.Println("flacmirror " + version)
+		return nil
+	}
 
 	if flag.NArg() != 2 {
 		flag.Usage()

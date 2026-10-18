@@ -8,6 +8,8 @@
 # Build output
 /bin/
 /dist/
+/flacmirror
+/flacmirror.exe
 
 # Test binary, built with `go test -c`
 *.test

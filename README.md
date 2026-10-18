@@ -26,7 +26,7 @@ https://github.com/user-attachments/assets/11cb5058-59fc-4cee-9e90-50a791796a82
 
 ## Requirements
 
-- [Go](https://go.dev/) 1.21+ (only to build it)
+- [Go](https://go.dev/) 1.24+ (only to build it from source — not needed if you download a release binary)
 - [ffmpeg](https://ffmpeg.org/) on your `PATH`
 
 ### Installing ffmpeg
@@ -56,14 +56,18 @@ sudo pacman -S ffmpeg          # Arch
 If `ffmpeg` isn't found, flac-mirror prints the relevant instructions for
 your OS and exits.
 
-## Building
+## Installing
+
+Download the archive for your platform from the
+[releases page](https://github.com/randusr836/flac-mirror/releases),
+extract it, and run the `flacmirror` binary (`flacmirror.exe` on Windows)
+directly — it has no runtime dependencies besides `ffmpeg`.
+
+### Building from source
 
 ```sh
 go build -o flacmirror ./cmd/flacmirror
 ```
-
-This produces a single `flacmirror` binary (`flacmirror.exe` on Windows)
-with no other runtime dependencies besides `ffmpeg`.
 
 ## Usage
 
