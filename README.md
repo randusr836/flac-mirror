@@ -127,6 +127,10 @@ To see what a run would do without changing anything:
 ./flacmirror -dry-run /Volumes/MusicHDD/FLAC /Volumes/SDCARD/Music
 ```
 
+## Acknowledgments
+
+Built with the help of [Claude Code](https://claude.com/claude-code).
+
 ## Project layout
 
 ```
