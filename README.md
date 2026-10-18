@@ -133,10 +133,6 @@ To see what a run would do without changing anything:
 ./flacmirror -dry-run /Volumes/MusicHDD/FLAC /Volumes/SDCARD/Music
 ```
 
-## Acknowledgments
-
-Built with the help of [Claude Code](https://claude.com/claude-code).
-
 ## Project layout
 
 ```
@@ -148,3 +144,18 @@ internal/copyfile/    plain file copies + playlist rewriting
 internal/engine/      worker pool that executes a plan, emits progress events
 internal/tui/         Bubble Tea progress UI
 ```
+
+## Contributing
+
+Bug reports and pull requests are welcome — see
+[CONTRIBUTING.md](CONTRIBUTING.md) for how to build, test, and submit a
+change. Found a security issue? See [SECURITY.md](SECURITY.md) instead of
+opening a public issue.
+
+## Acknowledgments
+
+Built with the help of [Claude Code](https://claude.com/claude-code).
+
+## License
+
+[MIT](LICENSE)

@@ -1,0 +1,51 @@
+name: Bug report
+description: Something isn't working as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you expected to happen, and what actually happened.
+    validations:
+      required: true
+
+  - type: input
+    id: command
+    attributes:
+      label: Exact command you ran
+      placeholder: ./flacmirror -j 4 /Volumes/HDD/Music /Volumes/SDCARD/Music
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Relevant output / error message
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: flacmirror version
+      description: Output of `./flacmirror -version`
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: OS and architecture
+      placeholder: e.g. macOS 15 arm64, Ubuntu 24.04 x86_64, Windows 11
+    validations:
+      required: true
+
+  - type: input
+    id: ffmpeg-version
+    attributes:
+      label: ffmpeg version
+      description: Output of `ffmpeg -version` (first line)
+    validations:
+      required: false
