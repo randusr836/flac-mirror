@@ -85,6 +85,10 @@ func run() error {
 		return nil
 	}
 
+	if err := library.CheckWritable(dest); err != nil {
+		return err
+	}
+
 	if !*yes && len(plan.ToDelete) > 0 {
 		if !confirm(fmt.Sprintf("This will permanently delete %d file(s) from %s. Continue? [y/N] ", len(plan.ToDelete), dest)) {
 			fmt.Println("Aborted.")
