@@ -11,19 +11,30 @@ import (
 	"os"
 	"os/signal"
 	"runtime"
+	"runtime/debug"
 	"syscall"
 
 	"github.com/mattn/go-isatty"
 
-	"flacmirror/internal/engine"
-	"flacmirror/internal/ffmpegutil"
-	"flacmirror/internal/library"
-	"flacmirror/internal/tui"
+	"github.com/randusr836/flac-mirror/internal/engine"
+	"github.com/randusr836/flac-mirror/internal/ffmpegutil"
+	"github.com/randusr836/flac-mirror/internal/library"
+	"github.com/randusr836/flac-mirror/internal/tui"
 )
 
 // version is set at build time via -ldflags "-X main.version=...", e.g. by
-// goreleaser from the release tag.
+// goreleaser from the release tag. Builds that don't set it (e.g. go install)
+// fall back to the module version recorded in the binary's build info.
 var version = "dev"
+
+func init() {
+	if version != "dev" {
+		return
+	}
+	if info, ok := debug.ReadBuildInfo(); ok && info.Main.Version != "" && info.Main.Version != "(devel)" {
+		version = info.Main.Version
+	}
+}
 
 func main() {
 	if err := run(); err != nil {

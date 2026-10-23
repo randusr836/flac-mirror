@@ -1,4 +1,4 @@
-module flacmirror
+module github.com/randusr836/flac-mirror
 
 go 1.24.2
 

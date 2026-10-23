@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"flacmirror/internal/engine"
-	"flacmirror/internal/library"
+	"github.com/randusr836/flac-mirror/internal/engine"
+	"github.com/randusr836/flac-mirror/internal/library"
 )
 
 func newTestModel(workers int) Model {

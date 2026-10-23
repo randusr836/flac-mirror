@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"flacmirror/internal/library"
+	"github.com/randusr836/flac-mirror/internal/library"
 )
 
 func mustWriteFile(t *testing.T, path, content string) {

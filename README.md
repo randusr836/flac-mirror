@@ -65,6 +65,19 @@ Download the archive for your platform from the
 extract it, and run the `flacmirror` binary (`flacmirror.exe` on Windows)
 directly — it has no runtime dependencies besides `ffmpeg`.
 
+### Installing with Go
+
+If you have Go installed, you can build and install the latest release in
+one step:
+
+```sh
+go install github.com/randusr836/flac-mirror/cmd/flacmirror@latest
+```
+
+This puts the `flacmirror` binary in `$(go env GOBIN)` if that's set,
+otherwise in `$(go env GOPATH)/bin` (usually `~/go/bin`). Whichever it is
+needs to be on your `PATH`.
+
 ### Building from source
 
 ```sh
