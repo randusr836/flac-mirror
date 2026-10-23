@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"flacmirror/internal/copyfile"
-	"flacmirror/internal/library"
-	"flacmirror/internal/transcode"
+	"github.com/randusr836/flac-mirror/internal/copyfile"
+	"github.com/randusr836/flac-mirror/internal/library"
+	"github.com/randusr836/flac-mirror/internal/transcode"
 )
 
 // EventType identifies what a given Event is reporting.
